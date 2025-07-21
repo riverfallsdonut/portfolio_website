@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Developer</title>
+    <title>Saad Shah - Software Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-brand">Your Name</div>
+        <div class="nav-brand">Saad Shah</div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -23,21 +32,40 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+        <div class="hero-content fade-in">
+            <h1>Hi, I'm <span class="highlight">Saad Shah</span></h1>
             <h2>Software Developer</h2>
-            <p>I create elegant solutions to complex problems</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+            <p>Building elegant solutions for tomorrow's challenges</p>
+            <a href="#projects" class="cta-button">View My Work <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <h2>About Me</h2>
-        <div class="about-content">
+        <div class="about-content fade-in">
             <div class="about-text">
                 <p>I'm a passionate software developer with expertise in building modern web applications. 
-                   [Add your background, experience, and what drives you]</p>
+                   With a strong foundation in both frontend and backend technologies, I create scalable 
+                   solutions that make a difference. I'm constantly learning and exploring new technologies 
+                   to stay at the forefront of web development.</p>
+                <p class="mt-4">My journey in software development began with a fascination for problem-solving 
+                   and creating user-friendly experiences. Today, I specialize in building responsive web 
+                   applications that combine clean code with intuitive design.</p>
+                <div class="about-stats mt-4">
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -45,45 +73,76 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2>Technical Skills</h2>
-        <div class="skills-grid">
+        <div class="skills-grid fade-in">
             <div class="skill-card">
                 <i class="fas fa-code"></i>
                 <h3>Frontend</h3>
-                <p>HTML, CSS, JavaScript, React</p>
+                <p>HTML5, CSS3, JavaScript<br>React, Next.js<br>Tailwind CSS</p>
+                <div class="skill-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
             </div>
             <div class="skill-card">
                 <i class="fas fa-server"></i>
                 <h3>Backend</h3>
-                <p>Node.js, Python, Databases</p>
+                <p>Node.js, Express<br>Python, Django<br>SQL & NoSQL Databases</p>
+                <div class="skill-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
             </div>
             <div class="skill-card">
                 <i class="fas fa-tools"></i>
-                <h3>Tools</h3>
-                <p>Git, Docker, AWS</p>
+                <h3>Tools & DevOps</h3>
+                <p>Git, GitHub<br>Docker, AWS<br>CI/CD Pipelines</p>
+                <div class="skill-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of your first project</p>
+        <h2>Featured Projects</h2>
+        <div class="project-filters fade-in">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="web">Web Apps</button>
+            <button class="filter-button" data-filter="mobile">Mobile</button>
+            <button class="filter-button" data-filter="backend">Backend</button>
+        </div>
+        <div class="project-grid fade-in">
+            <div class="project-card" data-category="web">
+                <img src="project1.jpg" alt="E-Commerce Platform">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, product management, and secure payments.</p>
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                </div>
                 <div class="project-links">
-                    <a href="#" class="project-button"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" class="project-button"><i class="fas fa-external-link-alt"></i> Live</a>
+                    <a href="#" class="project-button"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#" class="project-button"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of your second project</p>
+            <div class="project-card" data-category="mobile">
+                <img src="project2.jpg" alt="Task Management App">
+                <h3>Task Management App</h3>
+                <p>A responsive task management application with real-time updates, built using Next.js and Firebase. Includes team collaboration features.</p>
+                <div class="project-tech">
+                    <span>Next.js</span>
+                    <span>Firebase</span>
+                    <span>React Native</span>
+                </div>
                 <div class="project-links">
-                    <a href="#" class="project-button"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" class="project-button"><i class="fas fa-external-link-alt"></i> Live</a>
+                    <a href="#" class="project-button"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#" class="project-button"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
             </div>
         </div>
@@ -92,19 +151,47 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Get In Touch</h2>
-        <div class="contact-content">
+        <div class="contact-content fade-in">
             <div class="contact-info">
-                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> your.email@example.com</a>
-                <a href="https://github.com/yourusername"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:your.email@example.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <span>your.email@example.com</span>
+                    </div>
+                </a>
+                <a href="https://github.com/yourusername" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div class="contact-details">
+                        <h4>GitHub</h4>
+                        <span>github.com/yourusername</span>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="contact-details">
+                        <h4>LinkedIn</h4>
+                        <span>linkedin.com/in/yourusername</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Saad Shah. All rights reserved.</p>
     </footer>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
